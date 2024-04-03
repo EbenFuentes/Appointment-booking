@@ -22,6 +22,16 @@ public class Appointment {
 	@ManyToMany
 	private Set<Service> services;
 
+	public Appointment() {
+
+	}
+
+	public Appointment(String customerName, LocalDate date, LocalTime time) {
+		this.customerName = customerName;
+		this.date = date;
+		this.time = time;
+	}
+
 	public Integer getId() {
 		return id;
 	}
